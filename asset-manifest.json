@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fc08a226.chunk.css",
+    "main.js": "/static/js/main.b56ee242.chunk.js",
+    "main.js.map": "/static/js/main.b56ee242.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d9501914.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d9501914.js.map",
+    "static/js/2.dbee4b71.chunk.js": "/static/js/2.dbee4b71.chunk.js",
+    "static/js/2.dbee4b71.chunk.js.map": "/static/js/2.dbee4b71.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d7d3165c0ef3114be87418a3583b5dc8.js": "/precache-manifest.d7d3165c0ef3114be87418a3583b5dc8.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.fc08a226.chunk.css.map": "/static/css/main.fc08a226.chunk.css.map",
+    "static/js/2.dbee4b71.chunk.js.LICENSE.txt": "/static/js/2.dbee4b71.chunk.js.LICENSE.txt",
+    "static/media/arrowLeft.svg": "/static/media/arrowLeft.106156cd.svg",
+    "static/media/arrowRight.svg": "/static/media/arrowRight.dd29e0d4.svg",
+    "static/media/directionArrow.svg": "/static/media/directionArrow.afe3c559.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9501914.js",
+    "static/js/2.dbee4b71.chunk.js",
+    "static/css/main.fc08a226.chunk.css",
+    "static/js/main.b56ee242.chunk.js"
+  ]
+}
