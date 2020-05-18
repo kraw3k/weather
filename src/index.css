@@ -1,14 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
+  display: flex;
   margin: 0;
   font-family: "Fira Sans", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
 }
-.App {
-  background-color: #282c34;
-  min-height: 100vh;
+
+button:focus {
+  outline: 0;
+}
+
+.visible {
+  display: flex !important;
+}
+
+#app {
+  display: flex;
+  max-width: 80vw;
+  margin-top: 10px;
+}
+
+#weatherList {
+  overflow: auto;
+  font-size: 14px;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  cursor: pointer;
+}
+
+.navigationColumn {
+  display: flex;
+  align-items: center;
+  min-width: 50px;
+  z-index: 1;
+}
+
+#navColumnLeft {
+  margin-right: -50px;
+  background: linear-gradient(
+    90deg,
+    rgba(144, 144, 144, 0.3757878151260504) 0%,
+    rgba(255, 255, 255, 0) 10%
+  );
+}
+#navColumnRight {
+  display: none;
+  margin-left: -50px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.896796218487395) 100%
+  );
+  justify-content: flex-end;
+}
+#navColumnLeft button {
+  border-radius: 0 60px 60px 0;
+}
+#navColumnRight button {
+  border-radius: 60px 0 0 60px;
+}
+
+.navigationColumn button {
+  display: none;
+  background-color: rgba(66, 66, 66, 0.3);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.navigationColumn button:hover {
+  background-color: rgba(66, 66, 66, 0.4);
+}
+.navigationColumn button img {
+  width: 32px;
+  height: 48px;
+}
+
+/* ### WeatherColumn ### */
+.columnWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 70px;
+  font-size: 12px;
+  border-right: 1px solid #8883;
+}
+.columnLabelsWrapper {
+  border: none;
+}
+
+.columnDay {
+  height: 30px;
+}
+.columnHour {
+  height: 40px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.columnForecast {
+  height: 80px;
+}
+.columnTemperatureChart {
+  display: flex;
+  height: 180px;
+}
+.columnRains {
+  height: 50px;
+}
+.columnWindDirection {
+  height: 80px;
+  background-color: #ebebeb;
+  border-bottom: none;
+}
+.columnWindSpeed {
+  height: 60px;
+  background-color: #ebebeb;
+  margin-top: -1px;
+}
+.columnPressureChart {
+  display: flex;
+  height: 100px;
+}
+
+.forecastImage {
+  width: 32px;
+}
+.windDirectionImage {
+  margin-bottom: 8px;
+}
+.windSpeedValue {
+  font-size: 14px;
+  margin-top: 4px;
+}
+.chartRainsWrapper {
+  height: 50px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+}
+.chartRains {
+  width: 100%;
+  background-color: #33ccff;
+  max-height: 30px;
+}
+
+.columnElement {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: #1e1e1e;
+}
+.columnLabelElement {
+  color: #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #8883;
+  border-right: none;
+  font-size: 10px;
+  font-weight: normal;
+  width: 70px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.chartLineWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.chart {
+  position: absolute;
+  left: 0;
+  /* top: 0; */
+}
+.chartPath {
+  fill: none;
+}
+.chartPathTemperature {
+  stroke: #ffd200;
+  stroke-width: 2px;
+}
+.chartPathPressure {
+  stroke: #000;
+  stroke-width: 1px;
+}
+.chartPoint {
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 1px;
+}
+.chartLabel {
+  text-anchor: middle;
+}
+.chartLabelTemperature {
+  font-size: 18px;
+}
+.chartLabelPressure {
+  font-size: 12px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .columnWrapper {
+    scroll-snap-align: start;
+  }
+  #app {
+    max-width: 100vw;
+  }
+}
+
+#weatherList::-webkit-scrollbar {
+  /* display: none; */
+  height: 2px;
+  background: #f1f1f1;
+}
+#weatherList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+#weatherList::-webkit-scrollbar-thumb {
+  background: #888;
+}
+#weatherList::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

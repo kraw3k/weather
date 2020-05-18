@@ -1,6 +1,6 @@
 ## About
 
-This is a simple weather widged built with React.js
+This is a simple weather widget built with React.js
 
 ## Running
 
